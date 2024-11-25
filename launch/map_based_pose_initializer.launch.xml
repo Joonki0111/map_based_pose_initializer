@@ -1,0 +1,8 @@
+<launch>
+  <node_container pkg="rclcpp_components" exec="component_container" name="init_test" namespace="" args="test_args">
+    <composable_node pkg="map_based_pose_initializer" plugin="map_based_pose_initializer::MapBasedPoseInitializer" name="MapBasedPoseInitializer" namespace="">
+      <extra_arg name="use_intra_process_comms" value="true"/>
+      <param from="$(find-pkg-share map_based_pose_initializer)/config/map_based_pose_initializer.param.yaml"/>
+    </composable_node>
+  </node_container>
+</launch>

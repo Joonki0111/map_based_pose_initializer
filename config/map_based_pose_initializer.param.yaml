@@ -1,0 +1,7 @@
+/**:
+    ros__parameters:
+        enable_status_debug: false
+        centerline_resolution: 6 #6 ~ 8
+        localization_score_threshold: 0.1
+        localization_accuracy_count_threshold: 20
+    
