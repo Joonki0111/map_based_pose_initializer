@@ -117,8 +117,7 @@ void MapBasedPoseInitializer::run()
             RCLCPP_INFO(rclcpp::get_logger("map_based_pose_initializer"), "Localization score[%f] below threshold[%f]",
                 status_.localization_accuracy.lateral_direction, param_.localization_score_threshold);
             status_.localization_accuracy_count = 0;
-            rclcpp::shutdown(); 
-
+            rclcpp::shutdown();
         }
         else if(status_.localization_accuracy.lateral_direction > param_.localization_score_threshold &&
             status_.localization_accuracy_count > param_.localization_accuracy_count_threshold)
